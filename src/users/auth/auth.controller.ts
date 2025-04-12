@@ -29,6 +29,8 @@ export class AuthController {
 
   @Get('check-login')
   async checkLogin(@Req() request: Request & { cookies: any }) {
+    console.log(1);
+
     return this.authService.checkLogin(request);
   }
   @Post('logout')

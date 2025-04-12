@@ -101,7 +101,7 @@ export class AuthService {
             relations: ['role', 'cartDetail', 'novels', 'novelVotes', 'bookVotes', 'payment'],
         });
         // console.log(user);
-        
+
 
         if (!user) {
             return { message: 'Tài khoản không tồn tại!' };
@@ -134,9 +134,8 @@ export class AuthService {
     }
 
     async checkLogin(request: Request & { cookies: any }) {
-        // console.log(request.cookies);
-        
         const token = request.cookies?.auth_token;
+        console.log(token);
         if (!token) {
             return { isAuthenticated: false, message: 'Người dùng chưa đăng nhập!' };
         }
