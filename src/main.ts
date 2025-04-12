@@ -9,7 +9,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.setGlobalPrefix('api');
   app.enableCors({
-    origin: ['http://localhost:5173', 'http://localhost:3000'],
+    origin: ['https://bookrunner-fe-cx3s.vercel.app', 'http://localhost:3000'],
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     credentials: true,
   });
